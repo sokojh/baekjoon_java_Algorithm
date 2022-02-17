@@ -2,14 +2,26 @@ package com.programmers;
 import java.util.*;
 public class Test {
     public static void main(String[] args) {
-        String [] alphabet = { "119", "119032", "34893"};
+        String [] alphabet = { "119", "119032", "34893","1"};
+
         boolean answer = true;
-        HashMap<String,Integer> map = new HashMap<>();
-        for(int i = 1; i<alphabet.length;i++) {
-            map.put(alphabet[i].substring(0, alphabet[0].length()), 0);
-            System.out.println(map.entrySet());
+        Arrays.sort(alphabet);
+        HashMap<String,String> map = new HashMap<>();
+        for(String temp : alphabet ) {
+           map.put(temp,temp);
         }
-        System.out.println(map.containsKey(alphabet[0]));
+        for(String str : alphabet){
+            for(int i = 0;i<str.length();i++){
+                String temp =str.substring(0,i);
+                if(map.containsKey(temp)){
+                    System.out.println(!answer);
+                }
+                System.out.println(answer);
+            }
+        }
+
+        System.out.println(map.entrySet());
+
 
 
 
