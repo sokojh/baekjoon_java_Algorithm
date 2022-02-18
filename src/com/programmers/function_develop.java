@@ -19,8 +19,9 @@ public class function_develop {
         for(int i=0;i<progresses.length;i++){
             int a = (int) Math.ceil(((double)(percent-progresses[i])/speeds[i]));
             q.add(a);
-
         }
+        System.out.println(q.element());
+
         while(!q.isEmpty()){
             if(q.isEmpty())
                 break;
